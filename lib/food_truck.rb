@@ -14,4 +14,10 @@ class FoodTruck
     inventory[item] = 0 if inventory[item] == 0
     inventory[item] += amount
   end
+
+  def potential_revenue
+    inventory.sum do |item, amount|
+      item.price * amount
+    end.round(2)
+  end
 end
