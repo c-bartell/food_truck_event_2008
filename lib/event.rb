@@ -19,4 +19,8 @@ class Event
       food_truck.inventory[item] != 0
     end
   end
+
+  # def sorted_item_list
+  #
+  # end
 end
