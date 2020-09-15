@@ -58,7 +58,6 @@ class EventTest < Minitest::Test
   end
 
   def test_it_can_find_food_trucks_that_sell_an_item
-    skip
     event = Event.new("South Pearl Street Farmers Market")
     food_truck1 = FoodTruck.new("Rocky Mountain Pies")
     item1 = Item.new({name: 'Peach Pie (Slice)', price: "$3.75"})
