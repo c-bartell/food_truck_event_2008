@@ -32,7 +32,12 @@ class Event
     total
   end
 
-  # def sorted_item_list
-  #
-  # end
+  def sorted_item_list
+    list = total_inventory.keys.map do |item|
+      item.name
+    end
+    list.sort_by do |name|
+      name[0]
+    end
+  end
 end
