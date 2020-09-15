@@ -38,5 +38,11 @@ class FoodTruckTest < Minitest::Test
 
     assert_equal expected, food_truck.inventory
     assert_equal 30, food_truck.check_stock(item1)
+
+    food_truck.stock(item1, 25)
+    expected = { item1 => 55 }
+
+    assert_equal expected, food_truck.inventory
+    assert_equal 55, food_truck.check_stock(item1)
   end
 end
